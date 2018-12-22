@@ -1,0 +1,19 @@
+<html>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class=flashes>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    <a href="{{url_for('index')}}">Home</a>
+    <h1>Suppliers</h1>
+    {% for supplier in suppliers %}
+        <p>
+            id: {{supplier.id}}
+            name: {{supplier.supplierName}}
+        </p>
+    {% endfor %}
+</html>

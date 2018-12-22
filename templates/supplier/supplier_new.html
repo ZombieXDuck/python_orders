@@ -1,0 +1,9 @@
+<html>
+    <a href="{{url_for('index')}}">Home</a>
+    <h1>Supplier Form</h1>
+    <form method="POST" action="{{url_for('supplier_new')}}">
+        {{ supplier_form.hidden_tag() }}
+        {{ supplier_form.supplierName.label }} {{ supplier_form.supplierName(size=20) }}
+        <input type="submit" value="Submit">
+    </form>
+</html>

@@ -1,0 +1,14 @@
+<html>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class=flashes>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    <p>Index page</p>
+    <a href="{{url_for('supplier_new')}}">Create a supplier</a>
+    <a href="{{url_for('suppliers')}}">Suppliers</a> 
+</html>
